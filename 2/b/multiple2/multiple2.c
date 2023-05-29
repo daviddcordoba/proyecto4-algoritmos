@@ -5,27 +5,27 @@
 
 int main(){
 
-    int x, y, X, Y, e1,e2; // aux para que guarde el valor de X /---/ X Y para chequear la pre y post condicion
+    int x, y, Xinput, Yinput ;
     
     printf("Ingrese un valor para x: ");
-    scanf("%d",&X);
+    scanf("%d",&Xinput);
     
     printf("Ingrese un valor para y: ");
-    scanf("%d",&Y);
+    scanf("%d",&Yinput);
 
-    x = X;
-    y = Y;
+    x = Xinput;
+    y = Yinput;
 
     /* ----Precondicion---- */
-    assert( x == X && y == Y);
+    assert( x == Xinput && y == Yinput);
 
-    e1 = x + 1;
-    e2 = x + y;
+    x = Xinput + 1;
+    y = Xinput + Yinput;
 
     /* ----Postcondicion---- */
-    assert( e1 == X + 1 && e2 == X+Y);
+    assert( x == Xinput + 1 && y == Xinput+Yinput);
 
-    printf("El estado final es:x=%d, y=%d", e1,e2);
+    printf("El estado final es:x=%d, y=%d", x,y);
 
     return 0;
 }
