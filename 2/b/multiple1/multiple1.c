@@ -5,7 +5,7 @@
 
 int main(){
 
-    int x, y, z, Xinput, Yinput, Zinput, e1,e2,e3; //  X, Y, Z para chequear la pre y post condicion // e1,e2,e3  para guardar los resultados de las operaciones
+    int x, y, z, Xinput, Yinput, Zinput; 
     
     printf("Ingrese un valor para x: ");
     scanf("%d",&Xinput);
@@ -23,14 +23,14 @@ int main(){
     /* ----Precondicion---- */
     assert( x == Xinput && y == Yinput && z == Zinput);
 
-    e1 = y;
-    e2 = y + x + z;
-    e3 = y + x;
+    x = Yinput;
+    y = Yinput + Xinput + Zinput;
+    z = Yinput + Xinput;
 
     /* ----Postcondicion---- */
-    assert( e1 == Yinput && e2 == Yinput + Xinput + Zinput && e3 == Yinput + Xinput);
+    assert( x == Yinput && y == Yinput + Xinput + Zinput && z == Yinput + Xinput);
 
-    printf("Los estados finales son:  x=%d, y=%d, z=%d ",e1,e2,e3);
+    printf("Los estados finales son:  x=%d, y=%d, z=%d ",x,y,z);
 
     return 0;
 }

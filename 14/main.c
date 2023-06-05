@@ -5,7 +5,6 @@ typedef struct _persona{
     int edad;
     float altura;
     float peso;
-
 }persona_t;
 
 float peso_promedio( persona_t arr[],int longitud){
@@ -19,7 +18,6 @@ float peso_promedio( persona_t arr[],int longitud){
     _pesopromedio = _pesopromedio/longitud;
 
     return _pesopromedio;
-
 }
 
 persona_t persona_de_mayor_edad( persona_t arr[], unsigned int longitud){
@@ -36,7 +34,6 @@ persona_t persona_de_mayor_edad( persona_t arr[], unsigned int longitud){
         }
         i++;
     }
-
     return persona_mayor;
 }
 
@@ -53,7 +50,6 @@ persona_t persona_de_menor_altura(persona_t arr[],unsigned int longitud){
         }
         i++;
     }
-
     return persona;
 }
 

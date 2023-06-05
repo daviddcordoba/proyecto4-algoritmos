@@ -10,11 +10,9 @@ typedef struct{
     valor_t valor; // int valor
 }asoc;
 
-
 bool asoc_existe(asoc a[], int tam, clave_t c){
-
     int i = 0;
-    while( i < N ){
+    while( i < tam ){
         if(a[i].clave == c){
             return 1;
         }else{
@@ -22,7 +20,6 @@ bool asoc_existe(asoc a[], int tam, clave_t c){
         }
     }
     return 0;
-
 };
 
 int main(){
@@ -35,17 +32,25 @@ int main(){
     int i = 0;
     while( i < N){
         printf("Ingrese altura y clave: ");
-        scanf("%d %c",&a[i].valor,&a[i].clave); // tuve que hacerlo asi porque si pedia la clave que es un char despues del entero porque me iba tomar el 'enter' como "\n" y no me dejaba ingresar una letra
+        scanf("%d _%c",&a[i].valor,&a[i].clave); // tuve que hacerlo asi porque si pedia la clave que es un char despues del entero porque me iba tomar el 'enter' como "\n" y no me dejaba ingresar una letra
         printf("\n");
         i++;
     }
 
+    
+    
+    
     if(asoc_existe(a,N,key)){
         printf("La clave existe");
     }else{
         printf("La clave no existe");
     }
 
-
     return 0;
 }
+
+/*
+community material theme ocean high contrast ++
+
+ */
+

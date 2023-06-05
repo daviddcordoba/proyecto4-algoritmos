@@ -34,7 +34,7 @@ int main(){
 
         int m = 0;
         printf("El arreglo es: ");
-        while (m <= N - 1)
+        while (m < N )
         {
             printf("%d ",a[m]);
             m = m + 1;
@@ -43,8 +43,5 @@ int main(){
         printf("Los valores de posicion no estan en el rango.");
     }
     
-
-
-
     return 0;
 }

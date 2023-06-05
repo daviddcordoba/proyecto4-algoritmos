@@ -23,7 +23,6 @@ struct datos_t stats(float a[], int tam){
         if(a[i] > calc.maximo){
             calc.maximo = a[i];
         }
-
         suma = suma + a[i];
         i = i + 1;
     }
@@ -33,8 +32,6 @@ struct datos_t stats(float a[], int tam){
     return calc;
     
 };
-
-
 
 int main(){
     int i = 0,elem;
@@ -48,10 +45,10 @@ int main(){
 
     struct datos_t calc;
     calc = stats(a,N);
+
     printf("El minimo elemento del arreglo es %f\n",calc.minimo);
     printf("El mayor elemento del arreglo es %f\n", calc.maximo);
     printf("El promedio de los elementos es %f\n", calc.promedio);
-
 
     return 0;
 }
